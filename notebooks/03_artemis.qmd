@@ -34,6 +34,14 @@ should print the current working directory:
 /project/Training/demo1/af_demo
 ```
 
+## Optional: Generate a FASTA file
+Fasta files are simply text. You can make one right in your jobscript or on the command line with these commands, for example:
+
+```
+echo ">T1084 Meio, Meiothermus silvanus, 73 residues|" > demo.fasta
+echo "MAAHKGAEHHHKAAEHHEQAAKHHHAAAEHHEKGEHEQAAHHADTAYAHHKHAEEHAAQAAKHDAEHHAPKPH" >> demo.fasta
+```
+
 
 ## Make a PBS Jobscript
 
@@ -47,7 +55,7 @@ The contents at a minimum, should look something like this.
 
 #PBS -P Training
 #PBS -l select=1:ncpus=8:mem=32gb:ngpus=0
-#PBS -l walltime=04:00:00
+#PBS -l walltime=48:00:00
 #PBS -N job01
 
 # Load necessary modules (on Artemis, this will load the correct python environment with AlphaFold installed)
@@ -135,6 +143,7 @@ This folder will be created by AlphaFold if it does not exist, and will contain 
 | relaxed_model_*.pdb | A PDB format text file containing the predicted structure, after performing an Amber relaxation procedure on the unrelaxed structure prediction |
 | unrelaxed_model_*.pdb | A PDB format text file containing the predicted structure, exactly as outputted by the model. |
 
+: AF outputs
 
 ### Visualise the output
 
@@ -155,7 +164,7 @@ The below script will run the same workflow, but leverage the GPU in certain ste
 
 #PBS -P Training
 #PBS -l select=1:ncpus=8:mem=32gb:ngpus=1
-#PBS -l walltime=04:00:00
+#PBS -l walltime=48:00:00
 #PBS -N job01_gpu
 
 # Load necessary modules (on Artemis, this will load the correct python environment with AlphaFold installed)
@@ -194,4 +203,4 @@ run_alphafold.py \
         --uniclust30_database_path=${ALPHADB}/uniclust30/uniclust30_2018_08/uniclust30_2018_08
 ```
 
-For this simple example, the GPU speed up is around 2x.
+For this simple example, with 8cpus and 32gb RAM, it will take around 35 hours. Only the final step is GPU optimised, reducing the time to 34 hours.
