@@ -43,8 +43,12 @@ website:
 format:
   html:
    toc: true
+   css: [styles.scss]
+   quarto-margin-sidebar:
+     max-width: 1000px
    theme:
       light: flatly
       dark: darkly
+
    code-link: true
    code-fold: false
