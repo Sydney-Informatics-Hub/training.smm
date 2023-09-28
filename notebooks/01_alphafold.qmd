@@ -102,8 +102,10 @@ blastp -query query.fasta -db nr -out results.txt -evalue 1e-5 -outfmt 6
 ```
 Where `query.fasta` is your *FASTA* sequence, and `nr` is the *BLAST* database.
 
+Akdel, M., Pires, D.E.V., Pardo, E.P. et al. A structural biology community assessment of AlphaFold2 applications. Nat Struct Mol Biol 29, 1056–1067 (2022). [https://doi.org/10.1038/s41594-022-00849-w](https://doi.org/10.1038/s41594-022-00849-w)
 
 * Reducing Experimental Costs: Determining protein structures experimentally using methods like X-ray crystallography or nuclear magnetic resonance (NMR) can be time-consuming and expensive. AlphaFold's predictions can provide a cost-effective alternative to obtaining initial structural information and prioritising which proteins to study experimentally.
+
 
 ## Citations
 
