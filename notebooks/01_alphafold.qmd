@@ -16,6 +16,7 @@ AlphaFold2 is computationally optimised and can deliver predictions within a mat
 
 AlphaFold2 incorporates an attention mechanism that allows it to focus on relevant parts of the protein sequence when making predictions. This attention mechanism provides insights into the model's decision-making process and makes it more interpretable than the original AlphaFold.
 
+Here is a good introductory video into AlphaFold by SciShow: [How AI Could Change Biology](https://www.youtube.com/watch?v=gVzPMZqOTo4)
 
 ## Manual Database Search
 

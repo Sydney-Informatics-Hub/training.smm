@@ -125,6 +125,7 @@ cookieconsent.run({
   
 
 
+<link rel="stylesheet" href="../styles.scss">
 </head>
 
 <body class="nav-fixed">
@@ -208,9 +209,9 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction-to-the-high-performance-computing" id="toc-introduction-to-the-high-performance-computing" class="nav-link active" data-scroll-target="#introduction-to-the-high-performance-computing">Introduction to the High Performance Computing</a></li>
-  <li><a href="#what-is-the-artemis-hpc" id="toc-what-is-the-artemis-hpc" class="nav-link" data-scroll-target="#what-is-the-artemis-hpc">What is the Artemis HPC?</a>
+  <li><a href="#introduction-to-the-high-performance-computing" id="toc-introduction-to-the-high-performance-computing" class="nav-link active" data-scroll-target="#introduction-to-the-high-performance-computing">Introduction to the High Performance Computing</a>
   <ul class="collapse">
+  <li><a href="#what-is-the-artemis-hpc" id="toc-what-is-the-artemis-hpc" class="nav-link" data-scroll-target="#what-is-the-artemis-hpc">What is the Artemis HPC?</a></li>
   <li><a href="#getting-an-artemis-account" id="toc-getting-an-artemis-account" class="nav-link" data-scroll-target="#getting-an-artemis-account">Getting an Artemis Account</a></li>
   <li><a href="#connecting-to-artemis" id="toc-connecting-to-artemis" class="nav-link" data-scroll-target="#connecting-to-artemis">Connecting to Artemis</a></li>
   </ul></li>
@@ -224,9 +225,8 @@ cookieconsent.run({
 
 <section id="introduction-to-the-high-performance-computing" class="level1">
 <h1>Introduction to the High Performance Computing</h1>
-</section>
-<section id="what-is-the-artemis-hpc" class="level1">
-<h1>What is the Artemis HPC?</h1>
+<section id="what-is-the-artemis-hpc" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-artemis-hpc">What is the Artemis HPC?</h2>
 <p>HPC stands for ‘High Performance Computing’, our local HPC is called “Artemis”. You might colloquially refer to Artemis as a ‘supercomputer’. Technically, Artemis is a computing cluster, which is a whole lot of individual computers networked together. AS of 2023, Artemis consists of:</p>
 <pre><code>* 7,636 cores (CPUs)
 * 45 TB of RAM
@@ -243,6 +243,7 @@ cookieconsent.run({
 <blockquote class="blockquote">
 <p>The authors acknowledge the Sydney Informatics Hub and the University of Sydney’s high performance computing cluster, Artemis, for providing the computing resources that have contributed to the results reported herein.</p>
 </blockquote>
+</section>
 <section id="getting-an-artemis-account" class="level2">
 <h2 class="anchored" data-anchor-id="getting-an-artemis-account">Getting an Artemis Account</h2>
 <p>Get an Artemis account by creating a project with Artemis HPC access in <a href="https://dashr.sydney.edu.au/">Researcher Dashboard (DashR)</a>.</p>
@@ -255,7 +256,7 @@ cookieconsent.run({
 <p>You can thus connect to Artemis from anywhere, requiring only a terminal emulator with an SSH client. (If you’re not on the USyd network (ie off-campus), you’ll also need to connect to the University’s VPN.</p>
 <p>If you followed the <a href="https://sydney-informatics-hub.github.io/training.alphafold/setup.html">Setup instructions</a>, then you should already have the required software installed.</p>
 <p>Once you are set up with an ssh client, connect with your unikey credentials with:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-x</span> <span class="op">&lt;</span>unikey<span class="op">&gt;</span>@hpc.sydney.edu.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-X</span> <span class="op">&lt;</span>unikey<span class="op">&gt;</span>@hpc.sydney.edu.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

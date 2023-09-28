@@ -91,6 +91,7 @@ cookieconsent.run({
   
 
 
+<link rel="stylesheet" href="../styles.scss">
 </head>
 
 <body class="nav-fixed">
@@ -176,7 +177,8 @@ cookieconsent.run({
   <ul>
   <li><a href="#running-alphafold-on-the-the-sydney-research-cloud-ronin-aws" id="toc-running-alphafold-on-the-the-sydney-research-cloud-ronin-aws" class="nav-link active" data-scroll-target="#running-alphafold-on-the-the-sydney-research-cloud-ronin-aws">Running AlphaFold on the the Sydney Research Cloud (Ronin AWS)</a>
   <ul class="collapse">
-  <li><a href="#aws" id="toc-aws" class="nav-link" data-scroll-target="#aws">AWS</a></li>
+  <li><a href="#ronin-research-cloud" id="toc-ronin-research-cloud" class="nav-link" data-scroll-target="#ronin-research-cloud">RONIN Research Cloud</a></li>
+  <li><a href="#aws-and-gcp-public-clouds" id="toc-aws-and-gcp-public-clouds" class="nav-link" data-scroll-target="#aws-and-gcp-public-clouds">AWS and GCP public clouds</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -188,13 +190,16 @@ cookieconsent.run({
 
 <section id="running-alphafold-on-the-the-sydney-research-cloud-ronin-aws" class="level1">
 <h1>Running AlphaFold on the the Sydney Research Cloud (Ronin AWS)</h1>
-<section id="aws" class="level2">
-<h2 class="anchored" data-anchor-id="aws">AWS</h2>
+<section id="ronin-research-cloud" class="level2">
+<h2 class="anchored" data-anchor-id="ronin-research-cloud">RONIN Research Cloud</h2>
 <p>If you find your workflows do not suit the queued environment of Gadi or Artemis, you may find creating your own computational stack to be most robust and adaptable.</p>
 <p>Sydney offers researchers access to the AWS cloud via <a href="https://sydneyuni.atlassian.net/wiki/spaces/RC/pages/1108967637/RONIN+Research+Cloud">Ronin</a>. This interface allows creation and configuration of virtual machines on-demand with as many computational resources as you need for your current workload.</p>
-<p>Generally, you will start with a bare-bones virtual machine. You may then install AlphaFold and the corresponding databases as needed:</p>
-<p>https://github.com/deepmind/alphafold</p>
-<p>https://aws.amazon.com/blogs/machine-learning/run-alphafold-v2-0-on-amazon-ec2/</p>
+<p>Generally, you will start with a bare-bones virtual machine. You may then install AlphaFold and the corresponding databases as per the installation instructions:</p>
+<p><a href="https://github.com/google-deepmind/alphafold#installation-and-running-your-first-prediction">https://github.com/google-deepmind/alphafold</a></p>
+</section>
+<section id="aws-and-gcp-public-clouds" class="level2">
+<h2 class="anchored" data-anchor-id="aws-and-gcp-public-clouds">AWS and GCP public clouds</h2>
+<p>You may want to consult the native <a href="https://aws.amazon.com/blogs/machine-learning/run-alphafold-v2-0-on-amazon-ec2/">AWS AlphaFold installation instructions</a> too, or the <a href="https://cloud.google.com/blog/products/ai-machine-learning/running-alphafold-on-vertexai">Google Cloud Platform configuration steps</a> if you have ongoing AlphaFold requirements that can’t be satisfied by a local installation.</p>
 
 
 </section>

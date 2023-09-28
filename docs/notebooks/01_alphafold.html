@@ -125,6 +125,7 @@ cookieconsent.run({
   
 
 
+<link rel="stylesheet" href="../styles.scss">
 </head>
 
 <body class="nav-fixed">
@@ -213,7 +214,7 @@ cookieconsent.run({
   <li><a href="#manual-database-search" id="toc-manual-database-search" class="nav-link" data-scroll-target="#manual-database-search">Manual Database Search</a></li>
   <li><a href="#automation" id="toc-automation" class="nav-link" data-scroll-target="#automation">Automation</a></li>
   <li><a href="#fasta-format" id="toc-fasta-format" class="nav-link" data-scroll-target="#fasta-format">FASTA Format</a></li>
-  <li><a href="#use-cases" id="toc-use-cases" class="nav-link" data-scroll-target="#use-cases">Use cases</a></li>
+  <li><a href="#alphafold-use-cases" id="toc-alphafold-use-cases" class="nav-link" data-scroll-target="#alphafold-use-cases">AlphaFold Use Cases</a></li>
   <li><a href="#citations" id="toc-citations" class="nav-link" data-scroll-target="#citations">Citations</a></li>
   </ul></li>
   </ul>
@@ -227,13 +228,14 @@ cookieconsent.run({
 <section id="introduction-to-alphafold" class="level1">
 <h1>Introduction to AlphaFold</h1>
 <p>AlphaFold is a groundbreaking artificial intelligence system developed by <a href="https://www.deepmind.com/research/highlighted-research/alphafold">DeepMind</a> that focuses on predicting the three-dimensional structure of proteins. Proteins are essential molecules in our bodies that carry out various functions, and their structure plays a critical role in understanding their behaviour and function.</p>
-<p>AlphaFold2 utilises deep learning algorithms to analyse the amino acid sequence of a protein and predict its 3D structure accurately. By understanding the structure of proteins, scientists can gain insights into how they interact with other molecules, such as drugs, and how they function in biological processes. This knowledge can have profound implications for various fields, including medicine, drug discovery, and bioengineering.</p>
+<p>AlphaFold2 utilises deep learning algorithms to analyse the <a href="https://en.wikipedia.org/wiki/FASTA_format">amino acid sequence</a> of a protein and predict its 3D structure accurately. By understanding the <a href="https://en.wikipedia.org/wiki/Protein_structure_prediction">structure of proteins</a>, scientists can gain insights into how they interact with other molecules, such as drugs, and how they function in biological processes. This knowledge can have profound implications for various fields, including medicine, drug discovery, and bioengineering.</p>
 <p>The traditional methods for determining protein structures, such as X-ray crystallography and cryo-electron microscopy, can be time-consuming and expensive. AlphaFold2 significantly accelerates this process by providing accurate predictions in a fraction of the time. Its predictions have shown remarkable accuracy, comparable to experimental methods.</p>
 <p>By providing researchers with reliable protein structure predictions, AlphaFold2 has the potential to revolutionise our understanding of biology and accelerate scientific discoveries. It can aid in designing more effective drugs, understanding disease mechanisms, and developing enzymes for industrial applications. Ultimately, AlphaFold2’s advancements in protein folding have the potential to transform multiple areas of research and have a profound impact on human health and well-being.</p>
 <p>The original AlphaFold was introduced in 2018 and utilised deep learning techniques to predict protein structures. It made significant advancements in protein folding predictions compared to previous methods but still had limitations in accuracy.</p>
-<p><a href="https://www.nature.com/articles/s41586-021-03819-2">AlphaFold2, introduced in 2020</a>, represents a major breakthrough in protein structure prediction. It incorporates novel algorithmic improvements and advanced machine learning techniques, including a deep neural network architecture, to significantly improve accuracy. AlphaFold2 achieved remarkable performance in the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6927249/">Critical Assessment of Structure Prediction (CASP) competition in 2020</a>, outperforming other methods and approaching experimental accuracy for many protein structures.</p>
-<p>AlphaFold2 is much faster than its predecessor. The original AlphaFold required significant computational resources and time to generate structure predictions. In contrast, AlphaFold2 is significantly optimised and can deliver predictions within a matter of days, or even hours, for many proteins. Moreover, AlphaFold2 has been designed with scalability in mind. It can efficiently utilise distributed computing resources, enabling multiple protein structure predictions to be processed simultaneously.</p>
+<p><a href="https://www.nature.com/articles/s41586-021-03819-2">AlphaFold v2, introduced in 2020</a>, represents a major breakthrough in protein structure prediction. It incorporates novel algorithmic improvements and advanced machine learning techniques, including a deep neural network architecture, to significantly improve accuracy. AlphaFold2 achieved remarkable performance in the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6927249/">Critical Assessment of Structure Prediction (CASP) competition in 2020</a>, outperforming other methods and approaching experimental accuracy for many protein structures.</p>
+<p>AlphaFold2 is computationally optimised and can deliver predictions within a matter of days, or even hours, for many proteins. Moreover, AlphaFold2 has been designed with scalability in mind. It can efficiently utilise distributed computing resources, enabling multiple protein structure predictions to be processed simultaneously.</p>
 <p>AlphaFold2 incorporates an attention mechanism that allows it to focus on relevant parts of the protein sequence when making predictions. This attention mechanism provides insights into the model’s decision-making process and makes it more interpretable than the original AlphaFold.</p>
+<p>Here is a good introductory video into AlphaFold by SciShow: <a href="https://www.youtube.com/watch?v=gVzPMZqOTo4">How AI Could Change Biology</a></p>
 <section id="manual-database-search" class="level2">
 <h2 class="anchored" data-anchor-id="manual-database-search">Manual Database Search</h2>
 <p>If you only want to predict a small number of naturally occuring proteins, use the online ColabFold notebook or download the structures from the <a href="https://alphafold.ebi.ac.uk/">AlphaFold2 Protein Structure Database</a>. These are accessed through a web browser, allowing users to submit protein sequences and receive predicted structures via an online interface. It provides a user-friendly graphical interface that makes it accessible to non-experts and researchers without extensive programming or command line experience.</p>
@@ -259,8 +261,8 @@ FPEFLTMMARKMKDTDSEEEIREAFRVFDKDGNGYISAAELRHVMTNLGEKLTDEEVDEMIREA
 DIDGDGQVNYEEFVQMMTAK*</code></pre>
 <p>FASTA files are easy to read by both humans and computers, making them a standard format for sharing and storing biological sequence information. They are used in various bioinformatics applications, including sequence analysis, sequence alignment, database searches, and data exchange between different software tools and databases.</p>
 </section>
-<section id="use-cases" class="level2">
-<h2 class="anchored" data-anchor-id="use-cases">Use cases</h2>
+<section id="alphafold-use-cases" class="level2">
+<h2 class="anchored" data-anchor-id="alphafold-use-cases">AlphaFold Use Cases</h2>
 <ul>
 <li>Protein Structure Prediction: Understanding the 3D structure of proteins is crucial because a protein’s function is intricately linked to its shape. By accurately predicting protein structures, researchers can gain insights into their functions, interactions, and potential roles in various biological processes.</li>
 </ul>
@@ -277,7 +279,7 @@ DIDGDGQVNYEEFVQMMTAK*</code></pre>
 </ul>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gromacs</span> grompp <span class="at">-f</span> md.mdp <span class="at">-c</span> input.gro <span class="at">-p</span> topol.top <span class="at">-o</span> md.tpr</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">gromacs</span> mdrun <span class="at">-v</span> <span class="at">-deffnm</span> md</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Where <code>md.mdp</code> is the <em>GROMACS</em> configuration file, <code>input.gro</code> is the structure predicted by AlphaFold, and <code>topol.top</code> is the topology file.</p>
+<p>Where <code>md.mdp</code> is the <em>GROMACS</em> configuration file, <code>input.gro</code> is the structure predicted by AlphaFold (converted from <code>.pdb</code>), and <code>topol.top</code> is the topology file.</p>
 <ul>
 <li>Engineering and Design: AlphaFold can assist in protein engineering by designing proteins with specific functions or properties, such as creating enzymes with improved catalytic activities or generating novel protein structures for industrial applications.</li>
 </ul>
@@ -289,6 +291,7 @@ DIDGDGQVNYEEFVQMMTAK*</code></pre>
 </ul>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">blastp</span> <span class="at">-query</span> query.fasta <span class="at">-db</span> nr <span class="at">-out</span> results.txt <span class="at">-evalue</span> 1e-5 <span class="at">-outfmt</span> 6</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Where <code>query.fasta</code> is your <em>FASTA</em> sequence, and <code>nr</code> is the <em>BLAST</em> database.</p>
+<p>Akdel, M., Pires, D.E.V., Pardo, E.P. et al.&nbsp;A structural biology community assessment of AlphaFold2 applications. Nat Struct Mol Biol 29, 1056–1067 (2022). <a href="https://doi.org/10.1038/s41594-022-00849-w">https://doi.org/10.1038/s41594-022-00849-w</a></p>
 <ul>
 <li>Reducing Experimental Costs: Determining protein structures experimentally using methods like X-ray crystallography or nuclear magnetic resonance (NMR) can be time-consuming and expensive. AlphaFold’s predictions can provide a cost-effective alternative to obtaining initial structural information and prioritising which proteins to study experimentally.</li>
 </ul>
@@ -297,16 +300,16 @@ DIDGDGQVNYEEFVQMMTAK*</code></pre>
 <h2 class="anchored" data-anchor-id="citations">Citations</h2>
 <p>If you use the AlphaFold code or data, please cite:</p>
 <pre><code>@Article{AlphaFold2021,
-  author  = {Jumper, John and Evans, Richard and Pritzel, Alexander and Green, 
-            Tim and Figurnov, Michael and Ronneberger, Olaf and Tunyasuvunakool, 
-            Kathryn and Bates, Russ and {\v{Z}}{\'\i}dek, Augustin and Potapenko, 
-            Anna and Bridgland, Alex and Meyer, Clemens and Kohl, Simon A A and Ballard, 
+  author  = {Jumper, John and Evans, Richard and Pritzel, Alexander and Green,
+            Tim and Figurnov, Michael and Ronneberger, Olaf and Tunyasuvunakool,
+            Kathryn and Bates, Russ and {\v{Z}}{\'\i}dek, Augustin and Potapenko,
+            Anna and Bridgland, Alex and Meyer, Clemens and Kohl, Simon A A and Ballard,
             Andrew J and Cowie, Andrew and Romera-Paredes, Bernardino and Nikolov,
-            Stanislav and Jain, Rishub and Adler, Jonas and Back, Trevor and Petersen, 
-            Stig and Reiman, David and Clancy, Ellen and Zielinski, 
-            Michal and Steinegger, Martin and Pacholska, Michalina and Berghammer, 
-            Tamas and Bodenstein, Sebastian and Silver, David and Vinyals, 
-            Oriol and Senior, Andrew W and Kavukcuoglu, Koray and Kohli, 
+            Stanislav and Jain, Rishub and Adler, Jonas and Back, Trevor and Petersen,
+            Stig and Reiman, David and Clancy, Ellen and Zielinski,
+            Michal and Steinegger, Martin and Pacholska, Michalina and Berghammer,
+            Tamas and Bodenstein, Sebastian and Silver, David and Vinyals,
+            Oriol and Senior, Andrew W and Kavukcuoglu, Koray and Kohli,
             Pushmeet and Hassabis, Demis},
   journal = {Nature},
   title   = {Highly accurate protein structure prediction with {AlphaFold}},

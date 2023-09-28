@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -91,6 +125,7 @@ cookieconsent.run({
   
 
 
+<link rel="stylesheet" href="../styles.scss">
 </head>
 
 <body class="nav-fixed">
@@ -176,13 +211,14 @@ cookieconsent.run({
   <ul>
   <li><a href="#running-alphafold-in-a-dockersingularity-container" id="toc-running-alphafold-in-a-dockersingularity-container" class="nav-link active" data-scroll-target="#running-alphafold-in-a-dockersingularity-container">Running AlphaFold in a Docker/Singularity Container</a>
   <ul class="collapse">
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
   <li><a href="#containers" id="toc-containers" class="nav-link" data-scroll-target="#containers">Containers</a></li>
   <li><a href="#alphafold-with-docker" id="toc-alphafold-with-docker" class="nav-link" data-scroll-target="#alphafold-with-docker">AlphaFold with Docker</a></li>
   <li><a href="#alphafold-with-singularity" id="toc-alphafold-with-singularity" class="nav-link" data-scroll-target="#alphafold-with-singularity">AlphaFold with Singularity</a>
   <ul class="collapse">
   <li><a href="#alphafold-with-singularity-on-artemis-or-anywhere" id="toc-alphafold-with-singularity-on-artemis-or-anywhere" class="nav-link" data-scroll-target="#alphafold-with-singularity-on-artemis-or-anywhere">AlphaFold with Singularity on Artemis (or anywhere)</a></li>
   </ul></li>
+  <li><a href="#timing" id="toc-timing" class="nav-link" data-scroll-target="#timing">Timing</a></li>
+  <li><a href="#colabfold-singularity-image" id="toc-colabfold-singularity-image" class="nav-link" data-scroll-target="#colabfold-singularity-image">Colabfold singularity image</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -194,14 +230,6 @@ cookieconsent.run({
 
 <section id="running-alphafold-in-a-dockersingularity-container" class="level1">
 <h1>Running AlphaFold in a Docker/Singularity Container</h1>
-<section id="questions" class="level3 questions">
-<h3 class="anchored" data-anchor-id="questions">Questions</h3>
-<ul>
-<li>What is Docker?</li>
-<li>What is Singularity?</li>
-<li>How do I run AlphaFold in a container?</li>
-</ul>
-</section>
 <section id="containers" class="level2">
 <h2 class="anchored" data-anchor-id="containers">Containers</h2>
 <p>Containers, in general, are a technology that enables the packaging and isolation of applications and their dependencies in a consistent environment. They offer a lightweight and efficient way to deploy software by bundling everything needed to run an application, including its code, runtime, libraries, and settings, into a single package called a container. This approach ensures that the application runs consistently across different environments, from development to production. Containers provide a more lightweight alternative to traditional virtual machines, as they share the host operating system’s kernel, resulting in faster startup times and reduced resource overhead. This technology is widely used to simplify application deployment, improve scalability, and enhance the consistency of software across various systems.</p>
@@ -210,7 +238,7 @@ cookieconsent.run({
 <h2 class="anchored" data-anchor-id="alphafold-with-docker">AlphaFold with Docker</h2>
 <p>Docker is a virtualization solution that streamlines the development and deployment of applications. This is achieved through the encapsulation of an application into a self-contained <em>container</em>. This container comprises not only the application’s code but also its entire assortment of libraries, dependencies, as well as runtime and environmental configurations. This self-contained nature ensures consistent execution across diverse settings, markedly easing the complexities associated with application distribution, execution, and reproducibility.</p>
 <p>The officially recommend way to run local versions of AlphaFold is <a href="https://github.com/deepmind/alphafold#installation-and-running-your-first-prediction">through containerisation.</a>. This implementation orchestrates different parts of the analysis to run efficiently (on gpu, cpu, etc). The problem with the provided docker version is the requirement for elevated privileged access to the machine you are working on. This is difficult to accommodate in most shared facilities.</p>
-<p>There are <a href="https://hub.docker.com/search?q=alphafold">many different versions of AlphaFold</a> installations that utilise docker to ultimately run. We provide a <a href="https://hub.docker.com/r/sydneyinformaticshub/alphafold">couple options for configuration and running AF</a>. You may use this container on any system that supports it.</p>
+<p>There are many different versions of AlphaFold installations that utilise docker to ultimately run. We provide <a href="https://hub.docker.com/r/sydneyinformaticshub/alphafold">several options for configuration and running AF</a> optimised for Artemis. Although, you may use this container on <em>any</em> system that supports it.</p>
 </section>
 <section id="alphafold-with-singularity" class="level2">
 <h2 class="anchored" data-anchor-id="alphafold-with-singularity">AlphaFold with Singularity</h2>
@@ -218,37 +246,47 @@ cookieconsent.run({
 <section id="alphafold-with-singularity-on-artemis-or-anywhere" class="level3">
 <h3 class="anchored" data-anchor-id="alphafold-with-singularity-on-artemis-or-anywhere">AlphaFold with Singularity on Artemis (or anywhere)</h3>
 <p>We make use of our AlphaFold Docker images to build and run AF on Artemis. This is a two-step process. You must first build the docker image into a Singularity image. Then you may run it as below.</p>
-<p>Navigate to your project folder, e.g.&nbsp;<code>cd /project/Training/AF</code> We first make a new jobscript for the build step, <code>nano run_build.pbs</code>:</p>
-<pre><code>#!/bin/bash
-#PBS -P &lt;PROJECT&gt;
-#PBS -l select=1:ncpus=2:mem=16gb:ngpus=0
-#PBS -l walltime=02:10:00
-#PBS -N build01
-
-module load singularity cuda/10.2.89
-
-cd $PBS_O_WORKDIR
-export SINGULARITY_CACHEDIR=`pwd`
-export SINGULARITY_TMPDIR=`pwd`
-
-singularity build alpha.img docker://sydneyinformaticshub/alphafold:colabfold</code></pre>
-<p>Run the build step with <code>qsub run_build.pbs</code>.</p>
-<p>You only have to do this once. You can build the image offline and move the Singularity image to Artemis, or move this file anywhere else you wish to run with Singularity. Note, if you make any changes upstream to the Docker image, you must rebuild it to have those changes implemented.</p>
-<p>Next, make a jobscript to actually run the image, <code>nano run_sing.pbs</code></p>
-<pre><code>#!/bin/bash
-#PBS -P Training
-#PBS -l select=1:ncpus=4:mem=32gb:ngpus=1
-#PBS -l walltime=04:10:00
-#PBS -N job01
-
-module load singularity cuda/10.2.89
-
-cd $PBS_O_WORKDIR
-
-singularity run --nv alpha.img /bin/bash -c "colabfold_batch /project/Training/DATA/input.fasta "$PBS_O_WORKDIR"/output"</code></pre>
-
-
+<p>Navigate to your project folder, e.g.&nbsp;<code>cd /project/Training/AF</code></p>
+<p>First make a new jobscript for the build step, <code>nano alpha_build.pbs</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -P Training</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -l select=1:ncpus=2:mem=16gb:ngpus=0</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -l walltime=02:00:00</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -N build01</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load singularity cuda/10.2.89</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="va">$PBS_O_WORKDIR</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">SINGULARITY_CACHEDIR</span><span class="op">=</span><span class="kw">`</span><span class="bu">pwd</span><span class="kw">`</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">SINGULARITY_TMPDIR</span><span class="op">=</span><span class="kw">`</span><span class="bu">pwd</span><span class="kw">`</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ex">singularity</span> build colab.img docker://sydneyinformaticshub/alphafold:colabfold_v1.3.0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Run the build step with <code>qsub alpha_build.pbs</code>.</p>
+<p>You only have to do this once. Alternatively, you can build the image offline and move the Singularity image to Artemis, or move this file anywhere else you wish to run with Singularity. Note, if you make any changes upstream to the Docker image, you must rebuild it to have those changes implemented.</p>
+<p>Next, make a jobscript to actually run the image, <code>nano alpha_sing.pbs</code></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -P Training</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -l select=1:ncpus=8:mem=32gb:ngpus=1</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -l walltime=02:00:00</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -N job_colab01_gpu</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load singularity cuda/10.2.89</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="va">$PBS_O_WORKDIR</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ex">singularity</span> run <span class="at">--nv</span> /project/Training/DATA/colab.img /bin/bash <span class="at">-c</span> <span class="st">"colabfold_batch --templates --num-recycle 1 /project/Training/DATA/input.fasta "</span><span class="va">$PBS_O_WORKDIR</span><span class="st">"/output"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
+</section>
+<section id="timing" class="level2">
+<h2 class="anchored" data-anchor-id="timing">Timing</h2>
+<p>This job takes around 8 minutes with 8 cpus, 32 gb ram, and 1 gpu. Incredibly fast to make a prediction compared with native AF (albeit with different parameters and quality of model results). Without the GPU it takes around 40 minutes.</p>
+</section>
+<section id="colabfold-singularity-image" class="level2">
+<h2 class="anchored" data-anchor-id="colabfold-singularity-image">Colabfold singularity image</h2>
+<p>Note: You can grab a copy of the 8GB Singularity image and skip the build step!</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-O</span> colab.img https://cloudstor.aarnet.edu.au/plus/s/OlBeNi6xNV9wBMr/download</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
 </section>
 </section>
 
