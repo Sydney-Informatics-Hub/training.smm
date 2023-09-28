@@ -124,7 +124,7 @@ If your job has not completed successfully or AlphaFold outputs have not been ge
 
 Using the configuration options above will produce output in the folder specified, i.e:
 ```
---output_dir=${WORKDIR}/output_directory
+--output_dir=${OUTDIR}
 ```
 In our case, this should resolve to the directory
 ```output

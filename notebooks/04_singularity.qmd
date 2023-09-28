@@ -46,7 +46,7 @@ Next, make a jobscript to actually run the image, `nano alpha_sing.pbs`
 ```bash
 #!/bin/bash
 #PBS -P Training
-#PBS -l select=1:ncpus=4:mem=32gb:ngpus=1
+#PBS -l select=1:ncpus=8:mem=32gb:ngpus=1
 #PBS -l walltime=02:00:00
 #PBS -N job_colab01_gpu
 
@@ -54,8 +54,14 @@ module load singularity cuda/10.2.89
 
 cd $PBS_O_WORKDIR
 
-singularity run --nv /project/Training/DATA/colab.img /bin/bash -c "colabfold_batch --amber --templates --num-recycle 3 /project/Training/DATA/input.fasta "$PBS_O_WORKDIR"/output"
+singularity run --nv /project/Training/DATA/colab.img /bin/bash -c "colabfold_batch --templates --num-recycle 1 /project/Training/DATA/input.fasta "$PBS_O_WORKDIR"/output"
 ```
+
+## Timing
+
+This job takes around 8 minutes with 8 cpus, 32 gb ram, and 1 gpu.
+Incredibly fast to make a prediction compared with native AF (albeit with different parameters and quality of model results). 
+Without the GPU it takes around 40 minutes.
 
 ## Colabfold singularity image
 
