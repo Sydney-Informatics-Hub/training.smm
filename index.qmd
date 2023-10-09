@@ -7,14 +7,20 @@ output:
 ---
 
 
-This is a training course aimed at users wanting to learn about [AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) to perform predictions of protein structures. Beyond an introduction to the capabilities of AlphaFold, topics will cover different techincal approaches to run AlphaFold including using High Performance Computing and Cloud environments.
+This is a training course aimed at users wanting to learn about [AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) to perform predictions of protein structures. Beyond an introduction to the capabilities of AlphaFold, topics will cover different technical approaches to run AlphaFold including using High Performance Computing and Cloud environments.
 
+## Watch the Recording
+
+This was delivered as an interactive workshop at Sydney. If you find yourself here in the future feel free to watch the recording:
+
+[https://youtu.be/G2mDQ1th0CQ](https://youtu.be/G2mDQ1th0CQ)
 
 ## Trainers
 
-* Christopher Le
 * [Jake Chen](https://www.sydney.edu.au/medicine-health/about/our-people/research-students/jake-chen-301.html) FMH
 * [Nathaniel Butterworth](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
+* [Christopher Le](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
+* [Nandan Deshpande](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
 
 
 ## Course pre-requisites and setup requirements
