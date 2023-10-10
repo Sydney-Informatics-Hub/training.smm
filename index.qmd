@@ -17,7 +17,7 @@ This was delivered as an interactive workshop at Sydney. If you find yourself he
 
 ## Trainers
 
-* [Jake Chen](https://www.sydney.edu.au/medicine-health/about/our-people/research-students/jake-chen-301.html) FMH
+* [Jake Chen](https://www.linkedin.com/in/jakchen/?originalSubdomain=au) FMH
 * [Nathaniel Butterworth](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
 * [Christopher Le](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
 * [Nandan Deshpande](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
