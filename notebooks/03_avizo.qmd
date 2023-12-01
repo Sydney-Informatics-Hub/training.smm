@@ -3,3 +3,5 @@
 <figure class="video_container">
   <iframe src="https://www.youtube.com/embed/enMumwvLAug" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/hhJbHFBL457YhI" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/DaryaVanichkina1/jumping-into-digital-lessons-learned-while-moving-live-coding-machine-learning-workshops-online" title="Jumping into digital: Lessons learned while moving live coding machine learning workshops online" target="_blank">Jumping into digital: Lessons learned while moving live coding machine learning workshops online</a> </strong> from <strong><a href="https://www.slideshare.net/DaryaVanichkina1" target="_blank">Darya Vanichkina</a></strong> </div>
