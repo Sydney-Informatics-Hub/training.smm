@@ -1,5 +1,5 @@
 ---
-title: "AlphaFold"
+title: "Image Segmentation at Sydney Microscopy and Microanalysis"
 output:
   html_document:
     toc: false
@@ -7,25 +7,25 @@ output:
 ---
 
 
-This is a training course aimed at users wanting to learn about [AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) to perform predictions of protein structures. Beyond an introduction to the capabilities of AlphaFold, topics will cover different technical approaches to run AlphaFold including using High Performance Computing and Cloud environments.
+This is a training course aimed at users of the Sydney Microscopy and Microanalysis Core Research Facility at the University of Sydney who want to annotate their images using AI-assisted tools.
 
 ## Watch the Recording
 
 This was delivered as an interactive workshop at Sydney. If you find yourself here in the future feel free to watch the recording:
 
-[https://youtu.be/G2mDQ1th0CQ](https://youtu.be/G2mDQ1th0CQ)
+TODO
 
-## Trainers
+## Contributors
 
-* [Jake Chen](https://www.linkedin.com/in/jakchen/?originalSubdomain=au) FMH
+* [Seb](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) FMH
 * [Nathaniel Butterworth](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
-* [Christopher Le](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
-* [Nandan Deshpande](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
+* [Chad](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
+* [Andre](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
 
 
 ## Course pre-requisites and setup requirements
 
-No previous programming experience is required, this training course will introduce you to fundamental Unix and HPC as required. Training will be delivered online, so you will need access to a modern computer with a stable internet connection. Participants will require the Sydney VPN and a terminal client (as per the [Setup Instructions](./setup.html) provided).
+No previous programming experience is required, this training course will introduce you to fundamentals of the various tools (unix, Python) as required. Training will be delivered online, so you will need access to a modern computer with a stable internet connection. Participants will require the Sydney VPN and a terminal client (as per the [Setup Instructions](./setup.html) provided).
 
 
 ## Venue
@@ -63,15 +63,11 @@ Our full CoC, with incident reporting guidelines, is available [Here](https://sy
 |  |  |
 | --- | :--- |
 | **In-depth** |
-|   | [Intro to AlphaFold](notebooks/01_alphafold.qmd) |
-|   | [ColabFold](notebooks/07_colabfold.qmd) |
-|   | [Intro to HPC](notebooks/02_hpc.qmd) |
-|   | [Artemis Example](notebooks/03_artemis.qmd) |
+|   | [AI Image Segmentaion Microscopy Context](notebooks/01_microscopy.qmd) |
+|   | [AI Assisted Labeling and Annotation](notebooks/02_labeling.qmd) |
 | **Optional Topics** |
-|   | [Singularity Example](notebooks/04_singularity.qmd) |
-|   | [NCI Example](notebooks/05_nci.qmd) |
-|   | [Ronin Research Cloud (AWS) Example](notebooks/06_aws.qmd) |
-|   | [Biocommons Example](notebooks/08_biocommons.qmd) |
+|   | [Avizo Image Segmentation Workflow](notebooks/03_avizo.qmd) |
+|   | [Tools](notebooks/04_tools.qmd) |
 
 
 ## Setup Instructions

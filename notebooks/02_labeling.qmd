@@ -1,0 +1,50 @@
+# Labeling Images
+
+After an image comes off a micrscope an expert may be able to identify all the different features in the image. IT still takes work to annotate these features. Several tools are availble that have different capabilities for marking up and labeling, or annotating, images. Traditional applications used in Microscopy include [ImageJ/FIJI](https://imagej.net/imaging/segmentation), [Imod](https://www.youtube.com/watch?v=Nu7TzloKfWU), [Avizo/Amira](https://www.youtube.com/results?search_query=segmentation+avizo).
+
+In 2023 there are "AI-assisted" tools to accelerate the traditional labeling task. We have extensively tested many of these. At the time of writing some of these were in active and continual development, and some had been abandoned. We recommend three tools in particular and document their usage below.
+
+## [AnyLabeling](https://anylabeling.nrl.ai/)
+
+Recommended! Simple. Works anywhere. Tried on local Mac, Windows, Linux, with or without GPU.
+
+## [SegmentAnything for Microscopy](https://github.com/computational-cell-analytics/micro-sam )
+
+I installed this framework in a docker container locally (GTX 1650, 4GB VRAM). I could not get it to launch because of cuda out of memory issues, even with tiny pictures. I will try again on a bigger machine 
+
+These are the Docker instructions: https://github.com/Sydney-Informatics-Hub/micro-sam-contained 
+
+## [MonAI](https://monai.io/label.html)
+
+Assisted annotations using MonAI has been done for “similar” workflows, but generally the pre-trained models seem a little too different to be beneficial for many microscopy tasks. The overhead for setting up a server is complex and the implementation is confusing. After annotating images, the resulting segmentation is very very poor, or simply crashes. As hinted at, learning the correct file types may be an issue, but also the models have just been trained to predict very specific image types. But MonAI seems worthy to keep in mind because it seems like it will be the most versatile and adaptable to other workflows (beyond this specific liver-cell segmentation). 
+I have this working local with a NVIDIA GTX1650 4GB GPU, okay for testing, but need 16GB GPU for any training.  
+
+Generally, [follow these instructions](https://github.com/Sydney-Informatics-Hub/monai) to get a working machine and then follow the demos below to start labeling.
+
+### MonAI - 3D Slicer 
+
+https://github.com/Project-MONAI/tutorials/blob/main/monailabel/monailabel_monaibundle_3dslicer_lung_nodule_detection.ipynb 
+
+### MonAI – QuPath 
+
+Does not do a good job “out of the box”. Might need better training, but so far cannot get my labels to be used for training. 
+
+https://github.com/Project-MONAI/tutorials/blob/main/monailabel/monailabel_pathology_HoVerNet_QuPath.ipynb 
+
+## Additional Image Segmentation Tools
+
+https://github.com/obss/sahi 
+
+https://github.com/matjesg/DeepFLaSH
+
+https://github.com/bingogome/samm 
+
+https://colab.research.google.com/github/roboflow-ai/notebooks/blob/main/notebooks/how-to-segment-anything-with-sam.ipynb  
+
+https://github.com/roboflow/notebooks/blob/main/notebooks/automated-dataset-annotation-and-evaluation-with-grounding-dino.ipynb  
+
+https://colab.research.google.com/github/roboflow-ai/notebooks/blob/main/notebooks/automated-dataset-annotation-and-evaluation-with-grounding-dino-and-sam.ipynb  
+
+https://huggingface.co/spaces/IDEA-Research/Grounded-SAM  
+
+
