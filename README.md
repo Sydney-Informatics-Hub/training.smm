@@ -16,7 +16,7 @@
 
 The project will be built and rendered automatically (via github actions) at a URL with this format:
 ```html
-https://pages.github.sydney.edu.au/informatics/training.alphafold/
+https://pages.github.sydney.edu.au/informatics/training.smm/
 ```
 
 
