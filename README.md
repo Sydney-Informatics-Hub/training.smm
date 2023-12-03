@@ -1,4 +1,4 @@
-# SIH AlphaFold2 Training
+# SIH-SMM Image Segmenation Training
 
 ## File location
 
