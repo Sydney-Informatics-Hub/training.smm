@@ -16,7 +16,7 @@
 
 The project will be built and rendered automatically (via github actions) at a URL with this format:
 ```html
-https://pages.github.sydney.edu.au/informatics/training.smm/
+[https://sydney-informatics-hub.github.io/training.smm/](https://sydney-informatics-hub.github.io/training.smm/)
 ```
 
 
