@@ -18,6 +18,7 @@ The project will be built and rendered automatically (via github actions) at a U
 
 [https://sydney-informatics-hub.github.io/training.smm/](https://sydney-informatics-hub.github.io/training.smm/)
 
+To get this working you must manually make a new branch called `gh-pages` and then adjust on GitHub Settings > Pages > Build and Deployment, to `Source: Deploy from a branch` and `gh-pages: /(root)`. You may also have to do a `quarto render` once offline before pushing to main.
 
 
  
