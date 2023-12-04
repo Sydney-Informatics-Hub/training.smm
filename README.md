@@ -15,9 +15,9 @@
 5. Edit this Readme in your fork to reflect the content of your workshop.
 
 The project will be built and rendered automatically (via github actions) at a URL with this format:
-```html
+
 [https://sydney-informatics-hub.github.io/training.smm/](https://sydney-informatics-hub.github.io/training.smm/)
-```
+
 
 
  
