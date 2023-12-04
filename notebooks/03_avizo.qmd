@@ -1,9 +1,0 @@
-# Image Segmentation with Avizo
-
-<figure class="video_container">
-  
-
-
-<iframe src="https://www.slideshare.net/slideshow/embed_code/key/NeyZo0s14ccKGF?hostedIn=slideshare&page=upload" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-
-</figure>

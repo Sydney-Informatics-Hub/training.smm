@@ -1,9 +1,0 @@
-# Tools for file conversion and image processing
-
-Here we describe a series of tools that we have found useful for image Preprocessing, analysis and postprocessing
-
-See our github.
-
-Converters.
-
-
