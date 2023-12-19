@@ -8,7 +8,7 @@ In 2023 there are "AI-assisted" tools to accelerate the traditional labeling tas
 
 Recommended! Simple. Works anywhere. Tried on local Mac, Windows, Linux, with or without GPU.
 
-Follow the [documentation here](https://anylabeling.nrl.ai/docs).
+Follow the [documentation here](https://github.com/Sydney-Informatics-Hub/PIPE-4011-EM-CV/blob/main/docs/worfklow_segmentation_anylabeling.pdf).
 From this page https://github.com/vietanhdev/anylabeling/releases select the download to match your system: 
 
 ## [SegmentAnything for Microscopy](https://github.com/computational-cell-analytics/micro-sam )
