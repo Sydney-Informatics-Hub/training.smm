@@ -2,7 +2,7 @@
 
 Here we describe a series of tools that we have found useful for image Preprocessing, analysis and postprocessing
 
-See our github.
+See our toolkit on the [Microscopy-Segmentation github](https://github.com/Sydney-Informatics-Hub/Microscopy-Segmentation/tree/main/tools).
 
 Converters.
 
