@@ -151,7 +151,7 @@
     "href": "notebooks/04_tools.html",
     "title": "Tools for file conversion and image processing",
     "section": "",
-    "text": "Tools for file conversion and image processing\nHere we describe a series of tools that we have found useful for image Preprocessing, analysis and postprocessing\nSee our github.\nConverters."
+    "text": "Tools for file conversion and image processing\nHere we describe a series of tools that we have found useful for image Preprocessing, analysis and postprocessing\nSee our toolkit on the Microscopy-Segmentation github.\nConverters."
   },
   {
     "objectID": "notebooks/03_avizo.html",
