@@ -17,10 +17,10 @@ TODO
 
 ## Contributors
 
-* [Seb](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) FMH
+* [Seb](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
 * [Nathaniel Butterworth](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
-* [Chad](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
-* [Andre](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SIH
+* [Chad Moore](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SMM
+* [Andre Venne](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub/our-staff.html) SMM
 
 
 ## Course pre-requisites and setup requirements
@@ -65,9 +65,9 @@ Our full CoC, with incident reporting guidelines, is available [Here](https://sy
 | **In-depth** |
 |   | [AI Image Segmentaion Microscopy Context](notebooks/01_microscopy.qmd) |
 |   | [AI Assisted Labeling and Annotation](notebooks/02_labeling.qmd) |
-| **Optional Topics** |
 |   | [Avizo Image Segmentation Workflow](notebooks/03_avizo.qmd) |
-|   | [Tools](notebooks/04_tools.qmd) |
+|   | [Yolo Image Segmentation Workflow](notebooks/03b_yolo.qmd) |
+|   | [Conversion and Data Analysis Tools](notebooks/04_tools.qmd) |
 
 
 ## Setup Instructions

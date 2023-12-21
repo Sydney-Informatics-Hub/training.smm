@@ -2,13 +2,13 @@
 
 The [YOLO computer vision model](https://docs.ultralytics.com/) provides the tools and architecture for image segmentation tasks.
 
-It is a command line driven tool, allows substantial flexibility, is open-source, and works on any platform.
+It is a command line/python tool, allows substantial flexibility, is open-source, and works on any platform.
 
-Here documented we use YoloV8 in its simplest form. Additional tools and advanced usage including YoloV5 can be found on the repo.
+Here documented we use YoloV8 in its simplest form. Additional tools and advanced usage including YoloV5 can be found on the [main repo](https://github.com/Sydney-Informatics-Hub/Microscopy-Segmentation/tree/main)
 
 ## Setup your Python environment
 
-Start and Anaconda prompt or similar and execute the following commands
+Start an Anaconda prompt or similar and execute the following commands
 ```
 conda create -n yolo python=3.1
 conda activate yolo
