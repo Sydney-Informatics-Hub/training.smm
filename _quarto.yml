@@ -17,8 +17,10 @@ website:
           href: notebooks/01_microscopy.html
         - text: "Labeling and Annotation"
           href: notebooks/02_labeling.html
-        - text: "Avizo"
+        - text: "Segmentation with Avizo"
           href: notebooks/03_avizo.html
+        - text: "Segmentation with YOLO"
+          href: notebooks/03b_yolo.html
         - text: "Tools"
           href: notebooks/04_tools.html
 

@@ -1,9 +1,12 @@
 # Image Segmentation with Avizo
 
+Amira/Avizo3D is a commercial 3D image data visualisation and analysis toolkit.
+It only runs on Windows, and for Deep Learning (re: image segmentation) task it requires a reasonably specced GPU.
+
+If you have access to an appropriate  machine with a license, follow the deck below to complete a full image segmentation work flow.
+
 <figure class="video_container">
-  
 
-
-<iframe src="https://www.slideshare.net/slideshow/embed_code/key/NeyZo0s14ccKGF?hostedIn=slideshare&page=upload" width="600" height="600" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<iframe src="https://www.slideshare.net/slideshow/embed_code/key/NeyZo0s14ccKGF?hostedIn=slideshare&page=upload" width="1024" height="1024" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 </figure>
