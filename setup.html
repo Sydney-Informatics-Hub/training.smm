@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -168,7 +134,11 @@ cookieconsent.run({
   </li>  
         <li>
     <a class="dropdown-item" href="./notebooks/03_avizo.html" rel="" target="">
- <span class="dropdown-text">Avizo</span></a>
+ <span class="dropdown-text">Segmentation with Avizo</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./notebooks/03b_yolo.html" rel="" target="">
+ <span class="dropdown-text">Segmentation with YOLO</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./notebooks/04_tools.html" rel="" target="">
@@ -193,23 +163,10 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#get-a-google-account." id="toc-get-a-google-account." class="nav-link active" data-scroll-target="#get-a-google-account.">1. Get a Google Account.</a></li>
-  <li><a href="#get-an-artemis-account" id="toc-get-an-artemis-account" class="nav-link" data-scroll-target="#get-an-artemis-account">2. Get an Artemis Account</a>
-  <ul class="collapse">
-  <li><a href="#optional.-singularity-access-on-artemis" id="toc-optional.-singularity-access-on-artemis" class="nav-link" data-scroll-target="#optional.-singularity-access-on-artemis">Optional. Singularity Access on Artemis</a></li>
-  </ul></li>
-  <li><a href="#get-a-shell-terminal-emulator" id="toc-get-a-shell-terminal-emulator" class="nav-link" data-scroll-target="#get-a-shell-terminal-emulator">3. Get a shell terminal emulator</a>
-  <ul class="collapse">
-  <li><a href="#a.-linux-systems" id="toc-a.-linux-systems" class="nav-link" data-scroll-target="#a.-linux-systems">A. Linux systems</a></li>
-  <li><a href="#b.-osx-mac-computers-and-laptops" id="toc-b.-osx-mac-computers-and-laptops" class="nav-link" data-scroll-target="#b.-osx-mac-computers-and-laptops">B. OSX (Mac computers and laptops)</a></li>
-  <li><a href="#c.-windows" id="toc-c.-windows" class="nav-link" data-scroll-target="#c.-windows">C. Windows</a>
-  <ul class="collapse">
-  <li><a href="#option-i.-putty-easy" id="toc-option-i.-putty-easy" class="nav-link" data-scroll-target="#option-i.-putty-easy">Option i. PuTTY (Easy)</a></li>
-  <li><a href="#option-ii.-wsl-and-ubuntu-advanced" id="toc-option-ii.-wsl-and-ubuntu-advanced" class="nav-link" data-scroll-target="#option-ii.-wsl-and-ubuntu-advanced">Option ii. WSL and Ubuntu (Advanced)</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#off-campus-access" id="toc-off-campus-access" class="nav-link" data-scroll-target="#off-campus-access">4. Off-campus access</a></li>
-  <li><a href="#example-scripts-and-data" id="toc-example-scripts-and-data" class="nav-link" data-scroll-target="#example-scripts-and-data">5. Example scripts and data</a></li>
+  <li><a href="#get-anylabeling" id="toc-get-anylabeling" class="nav-link active" data-scroll-target="#get-anylabeling">1. Get AnyLabeling</a></li>
+  <li><a href="#get-access-to-avizo-." id="toc-get-access-to-avizo-." class="nav-link" data-scroll-target="#get-access-to-avizo-.">1. Get access to Avizo .</a></li>
+  <li><a href="#get-a-python-installation" id="toc-get-a-python-installation" class="nav-link" data-scroll-target="#get-a-python-installation">2. Get a Python installation</a></li>
+  <li><a href="#other-tools" id="toc-other-tools" class="nav-link" data-scroll-target="#other-tools">3. Other Tools</a></li>
   </ul>
 </nav>
     </div>
@@ -233,92 +190,24 @@ cookieconsent.run({
 
 </header>
 
-<section id="get-a-google-account." class="level1">
-<h1>1. Get a Google Account.</h1>
-<p>We will be utilising <a href="https://colab.research.google.com/">Google Colab</a>, you will need a google account to use this service.</p>
+<section id="get-anylabeling" class="level1">
+<h1>1. Get AnyLabeling</h1>
+<p>Download from:</p>
 <p><br></p>
 </section>
-<section id="get-an-artemis-account" class="level1">
-<h1>2. Get an Artemis Account</h1>
-<p>In the workshop you can make use of <em>training account</em>, but if you find yourself here in the future your unikey will require an Artemis account to complete the Artemis sections.</p>
-<p>Artemis access is managed at a project level via <a href="https://dashr.sydney.edu.au/">dashr.sydney.edu.au</a>. You can check current project access lists <em>“Artemis (HPC)”</em> under the <em>“Research Services”</em> section of your research data managment plan.</p>
-<figure class="figure">
-<img src="./fig/fig-dashr-project.png" style="margin:10px;height:200px" class="figure-img">
-</figure>
-<p><br></p>
-<p>If your project does not have access either Edit an existing project or create a New Project and be sure to select <em>Artemis (HPC)</em> option in the <em>“Data Services”</em> tab.</p>
-<figure class="figure">
-<img src="./fig/fig-dashr-new.png" style="margin:10px;height:200px" class="figure-img">
-</figure>
-<p><br></p>
-<p>Your Artemis account will be provisioned within a couple of days after it has been approved by your project’s Lead Chief Investigator.</p>
-<section id="optional.-singularity-access-on-artemis" class="level2">
-<h2 class="anchored" data-anchor-id="optional.-singularity-access-on-artemis">Optional. Singularity Access on Artemis</h2>
-<p>If you require the Singularity versions of AlphaFold, <a href="https://sydneyuni.service-now.com/sm?id=sc_cat_item&amp;sys_id=1ab0bb626d2935008dd31a4dcf150a21">please log a request</a> to be given access to Singularity.</p>
-</section>
-</section>
-<section id="get-a-shell-terminal-emulator" class="level1">
-<h1>3. Get a shell terminal emulator</h1>
-<p>To connect to Artemis HPC, and follow this lesson, you will need a <strong>‘terminal emulator’</strong> program installed on your computer. Often just called a ‘terminal’, ‘shell terminal’, or ‘shell client’. Terminal emulators give you a window with a <em>command line interface</em> through which you can send commands to be executed by your computer.</p>
-<section id="a.-linux-systems" class="level2">
-<h2 class="anchored" data-anchor-id="a.-linux-systems">A. Linux systems</h2>
-<p>If you use Linux, then chances are you already have a shell. Open your preferred terminal program and off you go! An X-Window server (X11) may also be useful if you want to be able to use GUIs.</p>
-<p>Connection to Artemis can be made via ssh by issuing the following command on the shell:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-X</span> <span class="op">&lt;</span>unikey<span class="op">&gt;</span>@hpc.sydney.edu.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="b.-osx-mac-computers-and-laptops" class="level2">
-<h2 class="anchored" data-anchor-id="b.-osx-mac-computers-and-laptops">B. OSX (Mac computers and laptops)</h2>
-<p>Mac operating systems come with a terminal program, called Terminal. Just look for it in your Applications folder, or hit Command-Space and type ‘terminal’.</p>
-<figure class="figure">
-<img src="./fig/fig-setup_macos.png" style="margin:10px;height:400px" class="figure-img">
-<figcaption class="figure-caption">
-<b>Terminal</b> is OSX’s native terminal emulator.
-</figcaption>
-</figure>
-<p><br></p>
-<p>We also recommend installing <a href="https://www.xquartz.org/">XQuartz</a>, which will replace OSX’s native X-Window server. XQuartz has some extra features that may offer better performance when using GUI programs. You’ll need to log out and back in again after installing XQuartz in order for it to activate.</p>
-<p>Connection to Artemis can be made via ssh by issuing the following command in the terminal:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-X</span> <span class="op">&lt;</span>unikey<span class="op">&gt;</span>@hpc.sydney.edu.au</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="c.-windows" class="level2">
-<h2 class="anchored" data-anchor-id="c.-windows">C. Windows</h2>
-<p>Windows has a couple of terminal programs and shells buried in the Programs menu (<code>cmd</code>, <code>powershell</code>). However, those aren’t going to work for us, as you’ll need extra programs and utilities to connect to Artemis, such as an <em>SSH</em> implementation. To use Artemis on Windows, you have a couple of options:</p>
-<section id="option-i.-putty-easy" class="level3">
-<h3 class="anchored" data-anchor-id="option-i.-putty-easy">Option i. PuTTY (Easy)</h3>
-<p>PuTTY, an SSH and telnet client, is a good simple option.</p>
-<p>Head to the <a href="https://putty.org">PuTTY Website</a> and download PuTTY. You can install it to your computer, or just download the ‘binary’ and run it directly. Create a new session for use with Artemis as follows:</p>
-<ol type="1">
-<li>Fill in the connection details:</li>
-</ol>
-<ul>
-<li>Host Name: <strong>hpc.sydney.edu.au</strong></li>
-<li>Port: <strong>22</strong></li>
-<li>Connection type: <strong>SSH</strong></li>
-</ul>
-<p><img src="./fig/fig-setup_putty.png" style="margin:10px;height:400px"></p>
-<ol start="3" type="1">
-<li>Name this session <strong>“Artemis”</strong> and click ‘Save’</li>
-</ol>
-<p>Note that PuTTY does not provide an X11 server natievly, so you won’t be able to use GUI programs on Artemis with <em>just</em> PuTTY. You can optionally install <a href="https://sourceforge.net/projects/vcxsrv/">VcXsrv</a> or similar to enable X-11 forwarding).</p>
-</section>
-<section id="option-ii.-wsl-and-ubuntu-advanced" class="level3">
-<h3 class="anchored" data-anchor-id="option-ii.-wsl-and-ubuntu-advanced">Option ii. WSL and Ubuntu (Advanced)</h3>
-<p>Install Ubuntu or some other Linux distro on the Windows Subsystem for Linux see <a href="https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview">here for details</a>. This one will give you the full suite of Linux functions.</p>
+<section id="get-access-to-avizo-." class="level1">
+<h1>1. Get access to Avizo .</h1>
+<p>Contact:</p>
 <p><br></p>
 </section>
+<section id="get-a-python-installation" class="level1">
+<h1>2. Get a Python installation</h1>
+<p>Get Miniconda</p>
+<p><br></p>
 </section>
-</section>
-<section id="off-campus-access" class="level1">
-<h1>4. Off-campus access</h1>
-<p>If you’re attempting this training by yourself, or following on <strong><a href="https://uni-sydney.zoom.us/">Zoom</a></strong>, <strong>off-campus</strong> then you’ll need to connect to the Sydney internet network <strong>before</strong> you can connect to Artemis.</p>
-<p><strong>VPN</strong> (Virtual Private Network) is a protocol that allows you to tap into a local private network remotely. Follow USyd Service Now instructions <a href="https://sydneyuni.service-now.com/sm?id=kb_article_view&amp;sysparm_article=KB0011049&amp;sys_kb_id=9e86e1a3dbdf0c50e35b89e4059619b9">on the Cisco Any Connect VPN</a>. Once you’ve connected to the VPN, the above connection methods will work, just as though you were on-campus.</p>
-</section>
-<section id="example-scripts-and-data" class="level1">
-<h1>5. Example scripts and data</h1>
-<p>Grab all the example scripts and data:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/Sydney-Informatics-Hub/training.alphafold/raw/main/af_demo.zip</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> af_demo.zip</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> af_demo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="other-tools" class="level1">
+<h1>3. Other Tools</h1>
+<p>Other tools are detailed throughout the documentation, you may need to install additional pieces of software depending on your workflow.</p>
 
 
 </section>
