@@ -1,1 +1,1 @@
-Sitemap: https://github.com/Sydney-Informatics-Hub/training.smm/sitemap.xml
+Sitemap: https://Sydney-Informatics-Hub.github.io/training.smm/sitemap.xml
